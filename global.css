@@ -1,9 +1,16 @@
-*{color: #fff}
-.bg{background: url('../images/marthaland.jpg.jpg') no-repeat; width: 100%; height: 100vh;}
-.form-container{border:1px solid #fff; padding:50px 60px; margin-top: 20vh;
+*{color: #ddddd}
+.bg{background: url('../images/marthaland.jpg.jpg') no-repeat; width: 100%; height: 100vh;
+    background-size: cover;
+}
+.form-container{background-color: white;border:1px solid #fff; padding:50px 60px; margin-top: 20vh;
 -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,2);
 -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,2);
 -box-shadow: -1px 4px 26px 11px rgba(0,0,0,2);
+}
+
+.martha{
+   height: 90px;
+    width: 310px;
 }
 
 .modal-title{
