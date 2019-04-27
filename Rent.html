@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="content=device-width", initial-scale="1">
         <meta author="John Raphael S. Apostol">
+        <meta author="Jeff Danielle Paswick">
         
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -34,13 +35,13 @@
         <nav class="navbar navbar-dark bg-dark">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Rent</a>
+                    <a class="nav-link active" href="../Pages/Rent.html">Rent</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Utility</a>
+                    <a class="nav-link" href="../Pages/Utility.html">Utility</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">History</a>
+                    <a class="nav-link" href="../Pages/history.html">History</a>
                 </li>
             </ul>
         </nav>
@@ -81,7 +82,7 @@
                                         <td>Status</td>
                                     </tr>
                                 <tbody>
-                                    <tr data-href="http://www.google.com/">
+                                    <tr onclick="modalTable1">
                                         <td>#</td>
                                         <td>#</td>
                                         <td>#</td>
@@ -448,7 +449,7 @@
                     </div>
                 </div>
         
-        <!-- Third Modal For "Princeton" -->
+        <!-- Third Modal For "Wharton" -->
                 <div class="modal fade" id="WhartonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             
@@ -482,7 +483,7 @@
                                                         </tr>
             
                                                         <tbody>
-                                                        <tr data-href="http://www.google.com/">
+                                                        <tr >
                                                             <td>#</td>
                                                             <td>#</td>
                                                             <td>#</td>
@@ -547,6 +548,35 @@
                 </div>
             </div>
         </div>
+        
+        
+        
+        
+        <!-- Bootstrap for Table Modal(All) Module -->
+        <div class="modal fade" id="table1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add Internet Fee</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <h3 for="form1">Are you sure you want to automatically add rent base on their building?</h3>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Yes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
         
         <!-- Boostrap for Remove Bill Items(All) -->
         <div class="modal fade" id="RemoveBillAll" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -773,7 +803,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary">Yes</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
+                    </div>`
                 </div>
             </div>
         </div>
@@ -1023,7 +1053,7 @@
                 $('#removeInternetWharton').click(function(){
                     $('#RemoveInternetWharton').modal('show');
             });
-                });
+        });
             
         </script>
         
@@ -1049,5 +1079,20 @@
                 });
             });
         </script>
+        
+        <!-- JavaScript code for Clickable Table row -->
+        <script>
+            $(function(){
+                $('#modalTable1').modal({
+                    keyboard: true,
+                    backdrop: "static",
+                    show:false,
+                    
+                }).on('show', function(){
+                    var getIdFromRow = $(event.target).closest('tr').data('id');
+                });
+            });  
+        </script>
+        
     </body>
 </html>  
